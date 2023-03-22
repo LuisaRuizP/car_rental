@@ -1,11 +1,11 @@
 // Specific CSS for your home-page
-.banner {
+.banner_HP {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
 }
 
-.banner h1 {
+.banner_HP h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -13,20 +13,19 @@
   font-weight: bold;
 }
 
-.banner p {
+.banner_HP p {
   font-size: 20px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.card-category {
+.card-category_HP {
   margin-top:10px;
   margin-bottom:10px;
 }
 
-
-.btn {
+.banner-btn {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
@@ -36,7 +35,7 @@
   border: 1px solid #363738;
 }
 
-.btn {
+.banner-btn {
   background: linear-gradient(#363738, #363738);
   color: white;
 }
