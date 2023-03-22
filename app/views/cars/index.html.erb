@@ -1,0 +1,22 @@
+<h1>List of Cars</h1>
+<div class="cards">
+  <% @cars.each do |car| %>
+
+    <div>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path car.photo.key %>)">
+        <% if @car.present? %>
+        <% @car.photos.each do |photo| %>
+        <%= image_tag photo.image.url(:thumb) %>
+        <% end %>
+        <% end %>
+        <%= car.model %>
+      </div>
+    <h2> Price:€<%= car.price %>/day <h2>
+    <h2> Passengers: <%= car.passengers %><h2>
+    <%= link_to "Check Details", "#", class: "btn btn-gradient" %>
+    </div>
+  <% end %>
+
+</div>
+
+<%= console %>
