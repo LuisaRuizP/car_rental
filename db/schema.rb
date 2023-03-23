@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+index-and-show
+ActiveRecord::Schema[7.0].define(version: 2023_03_22_153923) do
 ActiveRecord::Schema[7.0].define(version: 2023_03_22_154741) do
+master
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -55,15 +58,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_22_154741) do
   end
 
   create_table "cars", force: :cascade do |t|
+    t.string "brand"
     t.string "model"
     t.integer "passengers"
     t.integer "price"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+index-and-show
+    t.string "power"
+    t.string "fuel_type"
+
     t.float "latitude"
     t.float "longitude"
     t.string "address"
+master
     t.index ["user_id"], name: "index_cars_on_user_id"
   end
 
