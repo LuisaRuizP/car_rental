@@ -3,6 +3,7 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  text-align: center;
 }
 
 .banner_HP h1 {
@@ -11,6 +12,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
+  text-align: center;
 }
 
 .banner_HP p {
@@ -18,6 +20,7 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
 .card-category_HP {
@@ -33,9 +36,24 @@
   background: linear-gradient(#363738, #363738);
   transition: background 0.3s ease;
   border: 1px solid #363738;
+  text-align: center;
 }
 
 .banner-btn {
   background: linear-gradient(#363738, #363738);
   color: white;
+  text-align: center;
+}
+
+.btn_form {
+  color: white;
+  padding: 5px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#363738, #363738);
+  transition: background 0.3s ease;
+  border: 1px solid #363738;
+  text-align: center;
+  display: inline-block;
+  margin: none;
 }
