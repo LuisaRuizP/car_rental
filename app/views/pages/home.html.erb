@@ -2,8 +2,38 @@
   <div class="home_container">
     <h1>CAR RENTAL <strong></h1>
     <p>Change your life and drive your favourite car.</p>
-    <a class="btn btn-flat banner-btn" href="#">Rent now</a>
+    <a class="btn btn-flat banner-btn" href="/cars">Rent now</a>
   </div>
+
+  <div class="car container">
+  <div class="row justify-content-center">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: cars_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :brand,
+            params[:brand],
+            class: "form-control",
+            placeholder: "Car Brand"
+        %>
+        <%= text_field_tag :location,
+            params[:location],
+            class: "form-control",
+            placeholder: "Location"
+        %>
+        <%= text_field_tag :passengers,
+            params[:passengers],
+            class: "form-control",
+            placeholder: "Passengers"
+        %>
+         <%= text_field_tag :price,
+            params[:price],
+            class: "form-control",
+            placeholder: "Price of vehicle"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn_form btn-primary" %>
+    <% end %>
+  </div>
+</div>
+</div>
 </div>
 
 
