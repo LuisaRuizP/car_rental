@@ -11,7 +11,7 @@
       </div>
     <h2> Price:€<%= car.price %>/day <h2>
     <h2> Passengers: <%= car.passengers %><h2>
-    <%= link_to "Check Details", "#", class: "btn btn-gradient-index" %>
+    <%= link_to "Check Details", car_path(car), class: "btn btn-primary"%>
     </div>
   <% end %>
 </div>
