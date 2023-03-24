@@ -5,7 +5,7 @@ class CarsController < ApplicationController
       @cars = @cars.where("brand ILIKE ?", "%#{params[:brand]}%")
     end
     if params[:location].present?
-      @cars = @cars.where("location ILIKE ?", "%#{params[:location]}%")
+      @cars = @cars.where("address ILIKE ?", "%#{params[:location]}%")
     end
     if params[:passengers].present?
       @cars = @cars.where("passengers = ?", "#{params[:passengers]}")
@@ -13,10 +13,21 @@ class CarsController < ApplicationController
     if params[:price].present?
       @cars = @cars.where("price = ?", "#{params[:price]}")
     end
+
+    @markers = @cars.geocoded.map do |car|
+      {
+        lat: car.latitude,
+        lng: car.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {car: car}),
+        marker_html: render_to_string(partial: "marker", locals: {car: car})
+      }
+    end
   end
 
 
   def show
     @car = Car.find(params[:id])
+    @latitude = @car.latitude
+    @longitude = @car.longitude
   end
 end
